@@ -11,6 +11,7 @@ setuptools.setup(
     description="Fast build distribute package structure",
     long_description=long_description,
     long_description_content_type="text/markdown",
+    license='Apache License',
     url="https://github.com/hotbaby/build-dist-package",
     packages=setuptools.find_packages(),
     scripts=["build_dist_package/bin/build-dist-package.py"],
