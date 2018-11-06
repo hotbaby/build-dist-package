@@ -11,14 +11,14 @@ setuptools.setup(
     description="Fast build distribute package structure",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    license='Apache License',
+    license='MIT',
     url="https://github.com/hotbaby/build-dist-package",
     packages=setuptools.find_packages(),
     scripts=["build_dist_package/bin/build-dist-package"],
     install_requires=["click==7.0"],
     classifiers=[
         "Programming Language :: Python :: 2",
-        "License :: OSI Approved :: Apache License",
+        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
 )
