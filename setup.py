@@ -14,7 +14,7 @@ setuptools.setup(
     license='Apache License',
     url="https://github.com/hotbaby/build-dist-package",
     packages=setuptools.find_packages(),
-    scripts=["build_dist_package/bin/build-dist-package.py"],
+    scripts=["build_dist_package/bin/build-dist-package"],
     install_requires=["click==7.0"],
     classifiers=[
         "Programming Language :: Python :: 2",
