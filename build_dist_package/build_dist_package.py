@@ -20,6 +20,11 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="{pkg_url}",
     packages=setuptools.find_packages(),
+    install_requires=[],
+    entry_points={
+        'console_scripts': [
+        ]
+    },
     classifiers=[
         "Programming Language :: Python :: 2",
         "License :: OSI Approved :: MIT License",
@@ -29,7 +34,9 @@ setuptools.setup(
 """
 
 LICENSE_TPL = """
-Copyright (c) 2018 The Python Packaging Authority
+MIT License
+
+Copyright (c) 2018 hotbaby
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -48,6 +55,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
 """
 
 README_TPL = """
