@@ -11,10 +11,7 @@ from build_dist_package import build_dist_package
 @click.option('--pkg-url', default='https://github.com/pypa/sampleproject', help='package website url')
 @click.option('--author', default='Example Author', help='author')
 @click.option('--author-email', default='author@example.com', help='author email address')
-def main(path, pkg_desc, pkg_url, author, author_email, pkg_name):
+def cli(pkg_name, path, pkg_desc, pkg_url, author, author_email):
     build_dist_package(pkg_name, path=path, pkg_desc=pkg_desc, pkg_url=pkg_url,
                        author=author, author_email=author_email)
 
-
-if __name__ == '__main__':
-    main()  # NOQA
