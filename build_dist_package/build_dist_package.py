@@ -22,8 +22,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     install_requires=[],
     entry_points={
-        'console_scripts': [
-        ]
+        "console_scripts": []
     },
     classifiers=[
         "Programming Language :: Python :: 2",
