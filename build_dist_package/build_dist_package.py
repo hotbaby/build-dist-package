@@ -21,9 +21,6 @@ setuptools.setup(
     url="{pkg_url}",
     packages=setuptools.find_packages(),
     install_requires=[],
-    entry_points={
-        "console_scripts": []
-    },
     classifiers=[
         "Programming Language :: Python :: 2",
         "License :: OSI Approved :: MIT License",
