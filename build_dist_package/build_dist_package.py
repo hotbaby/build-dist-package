@@ -67,6 +67,15 @@ flake8==3.5.0
 """
 
 
+REQUIREMENTS_DEV_TPL = """
+twine==1.12.1
+autopep8==1.4
+pylint==1.9.3
+flake8==3.5.0
+click==7.0
+"""
+
+
 def _touch_file(file_path):
     with open(file_path, 'w+'):
         pass
@@ -94,6 +103,7 @@ def create_structure(pkg_name, path='.', **kwargs):
     os.mkdir(os.path.join(path, pkg_name, 'tests'))
     _touch_file(os.path.join(path, pkg_name, 'tests', '__init__.py'))
     _touch_file(os.path.join(path, pkg_name, 'requirements-test.txt'))
+    _touch_file(os.path.join(path, pkg_name, 'requirements-dev.txt'))
 
 
 def init_setup(pkg_name, path='.', author='Author',
@@ -145,10 +155,22 @@ def init_tests(pkg_name, path='.', **kwargs):
     return True
 
 
+def init_requirements_dev(pkg_name, path='.', **kwargs):
+    file_path = os.path.join(path, pkg_name, 'requirements-dev.txt')
+    assert os.path.exists(file_path), '%s not exists!' % file_path
+
+    stream = REQUIREMENTS_DEV_TPL
+    with open(file_path, 'w+') as f:
+        f.write(stream)
+
+    return True
+
+
 def build_dist_package(pkg_name, path='.', **kwargs):
     create_structure(pkg_name, path, **kwargs)
     init_setup(pkg_name, path, **kwargs)
     init_license(pkg_name, path, **kwargs)
     init_readme(pkg_name, path, **kwargs)
     init_tests(pkg_name, path, **kwargs)
+    init_requirements_dev(pkg_name, path, **kwargs)
     print 'build %s distribution package successfully.' % pkg_name
