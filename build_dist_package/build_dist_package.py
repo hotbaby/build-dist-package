@@ -17,7 +17,6 @@ setuptools.setup(
     author_email="{author_email}",
     description="{pkg_desc}",
     long_description=long_description,
-    long_description_content_type="text/markdown",
     url="{pkg_url}",
     license="MIT",
     packages=setuptools.find_packages(),
