@@ -71,7 +71,7 @@ REQUIREMENTS_DEV_TPL = """
 twine==1.12.1
 autopep8==1.4
 pylint==1.9.3
-flake8==3.5.0
+flake8==3.7.7
 click==7.0
 """
 
