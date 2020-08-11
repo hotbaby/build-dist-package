@@ -173,4 +173,4 @@ def build_dist_package(pkg_name, path='.', **kwargs):
     init_readme(pkg_name, path, **kwargs)
     init_tests(pkg_name, path, **kwargs)
     init_requirements_dev(pkg_name, path, **kwargs)
-    print 'build %s distribution package successfully.' % pkg_name
+    print('build %s distribution package successfully.' % pkg_name)

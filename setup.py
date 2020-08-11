@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="build-dist-package",
-    version="0.1.9",
+    version="0.1.10",
     author="Meng yangyang",
     author_email="mengyy_linux@163.com",
     description="Fast build distribute package structure",
